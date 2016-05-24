@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>flex-layout-attribute-demo - all</title>
+  <link href="css/flex-layout-attribute.min.css" rel="stylesheet">
+  <style type="text/css">
+    div {
+      background-color: #ccc;
+      height: 120px;
+    }
+
+    div div {
+      border: 1px solid #999;
+      padding: 10px;
+      height: auto;
+    }
+
+    hr {
+      margin: 30px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align: center;">Flex Layout Attribute</h2>
+
+  <code>
+    <pre>
+      &lt;div layout="direction vertically-horizontally reverse"&gt;
+          &lt;div self="size align order display"&gt;`
+              ...
+          &lt;/div&gt;
+      &lt;/div&gt;
+    </pre>
+  </code>
+
+  <hr />
+
+  <h3>row top-left default (direction vr-hr)</h3>
+  <div layout="row top-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+    <h3>size</h3>
+
+      <h5>(size-x*)</h5>
+      <div layout="row top-left">
+        <div self="size-x1">1</div>
+        <div self="size-x3">2</div>
+        <div self="size-x2">3</div>
+      </div>
+
+      <h5>(size-*of*)</h5>
+      <div layout="row top-left">
+        <div self="size-1of3">1</div>
+        <div self="size-1of3">2</div>
+        <div self="size-1of3">3</div>
+      </div>
+
+      <h5>(size-xxsmall)</h5>
+      <div layout="row top-left">
+        <div self="size-xxsmall">1</div>
+        <div self="size-xxsmall">2</div>
+        <div self="size-xxsmall">3</div>
+      </div>
+
+      <h5>(size-small)</h5>
+      <div layout="row top-left">
+        <div self="size-xsmall">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-small)</h5>
+      <div layout="row top-left">
+        <div self="size-small">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-smaller)</h5>
+      <div layout="row top-left">
+        <div self="size-smaller">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-medium)</h5>
+      <div layout="row top-left">
+        <div self="size-medium">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-larger)</h5>
+      <div layout="row top-left">
+        <div self="size-larger">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-large)</h5>
+      <div layout="row top-left">
+        <div self="size-large">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-xlarge)</h5>
+      <div layout="row top-left">
+        <div self="size-xlarge">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(size-xxlarge)</h5>
+      <div layout="row top-left">
+        <div self="size-xxlarge">1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+
+      <h5>(sm/md/lg-full/half)</h5>
+      <div self="size-xxsmall sm-full">1</div>
+      <div self="size-1of3 lg-half">2</div>
+      <div self="md-full">3</div> 
+
+    <h3>align</h3>
+      
+      <div layout="row top-left">
+        <div self="size-x1 top">1</div>
+        <div self="size-x3 center">2</div>
+        <div self="size-x2 bottom">3</div>
+      </div>
+
+    <h3>order</h3>
+
+      <h4>first / last / order-*</h4>
+      <div layout="row top-left">
+        <div self="size-x1 top last">1</div>
+        <div self="size-x3 center order-2">2</div>
+        <div self="size-x2 bottom order-3">3</div>
+      </div>
+
+      <h4>**-first / **-last</h4>
+      <div layout="row top-left">
+        <div self="size-xxsmall sm-last">1</div>
+        <div self="md-first">2</div> 
+      </div>
+
+    <h3>display</h3>
+
+      <h4>show / hide -- ??</h4>
+      <div layout="row top-left">
+        <div self="size-x1 top last show">1</div>
+        <div self="size-x1 top last hide">2</div>
+      </div>
+
+      <h4>**-show / **-hide</h4>
+      <div layout="row top-left">
+        <div self="size-x1 top last sm-show">1</div>
+        <div self="size-x1 top last sm-hide">2</div>
+        <div self="size-x1 top last md-show">3</div>
+        <div self="size-x1 top last md-hide">4</div>
+        <div self="size-x1 top last lg-show">5</div>
+        <div self="size-x1 top last lg-hide">6</div>
+      </div>
+
+  <h3>row top-center default (direction vr-hr)</h3>
+  <div layout="row top-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row top-right default (direction vr-hr)</h3>
+  <div layout="row top-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row top-spread default (direction vr-hr)</h3>
+  <div layout="row top-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row top-justify default (direction vr-hr)</h3>
+  <div layout="row top-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row top-stretch default (direction vr-hr)</h3>
+  <div layout="row top-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>row center-left default (direction vr-hr)</h3>
+  <div layout="row center-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row center-center default (direction vr-hr)</h3>
+  <div layout="row center-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row center-right default (direction vr-hr)</h3>
+  <div layout="row center-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row center-spread default (direction vr-hr)</h3>
+  <div layout="row center-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row center-justify default (direction vr-hr)</h3>
+  <div layout="row center-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row center-stretch default (direction vr-hr)</h3>
+  <div layout="row center-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>row bottom-left default (direction vr-hr)</h3>
+  <div layout="row bottom-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row bottom-center default (direction vr-hr)</h3>
+  <div layout="row bottom-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row bottom-right default (direction vr-hr)</h3>
+  <div layout="row bottom-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row bottom-spread default (direction vr-hr)</h3>
+  <div layout="row bottom-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row bottom-justify default (direction vr-hr)</h3>
+  <div layout="row bottom-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row bottom-stretch default (direction vr-hr)</h3>
+  <div layout="row bottom-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>row stretch-left default (direction vr-hr)</h3>
+  <div layout="row stretch-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row stretch-center default (direction vr-hr)</h3>
+  <div layout="row stretch-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row stretch-right default (direction vr-hr)</h3>
+  <div layout="row stretch-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row stretch-spread default (direction vr-hr)</h3>
+  <div layout="row stretch-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row stretch-justify default (direction vr-hr)</h3>
+  <div layout="row stretch-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>row stretch-stretch default (direction vr-hr)</h3>
+  <div layout="row stretch-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>column top-left default (direction vr-hr)</h3>
+  <div layout="column top-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column top-center default (direction vr-hr)</h3>
+  <div layout="column top-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column top-right default (direction vr-hr)</h3>
+  <div layout="column top-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column top-spread default (direction vr-hr)</h3>
+  <div layout="column top-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column top-justify default (direction vr-hr)</h3>
+  <div layout="column top-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column top-stretch default (direction vr-hr)</h3>
+  <div layout="column top-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>column center-left default (direction vr-hr)</h3>
+  <div layout="column center-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column center-center default (direction vr-hr)</h3>
+  <div layout="column center-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column center-right default (direction vr-hr)</h3>
+  <div layout="column center-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column center-spread default (direction vr-hr)</h3>
+  <div layout="column center-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column center-justify default (direction vr-hr)</h3>
+  <div layout="column center-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column center-stretch default (direction vr-hr)</h3>
+  <div layout="column center-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>column bottom-left default (direction vr-hr)</h3>
+  <div layout="column bottom-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column bottom-center default (direction vr-hr)</h3>
+  <div layout="column bottom-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column bottom-right default (direction vr-hr)</h3>
+  <div layout="column bottom-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column bottom-spread default (direction vr-hr)</h3>
+  <div layout="column bottom-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column bottom-justify default (direction vr-hr)</h3>
+  <div layout="column bottom-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column bottom-stretch default (direction vr-hr)</h3>
+  <div layout="column bottom-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>column stretch-left default (direction vr-hr)</h3>
+  <div layout="column stretch-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column stretch-center default (direction vr-hr)</h3>
+  <div layout="column stretch-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column stretch-right default (direction vr-hr)</h3>
+  <div layout="column stretch-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column stretch-spread default (direction vr-hr)</h3>
+  <div layout="column stretch-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column stretch-justify default (direction vr-hr)</h3>
+  <div layout="column stretch-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>column stretch-stretch default (direction vr-hr)</h3>
+  <div layout="column stretch-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>rows top-left default (direction vr-hr)</h3>
+  <div layout="rows top-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows top-center default (direction vr-hr)</h3>
+  <div layout="rows top-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows top-right default (direction vr-hr)</h3>
+  <div layout="rows top-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows top-spread default (direction vr-hr)</h3>
+  <div layout="rows top-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows top-justify default (direction vr-hr)</h3>
+  <div layout="rows top-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows top-stretch default (direction vr-hr)</h3>
+  <div layout="rows top-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>rows center-left default (direction vr-hr)</h3>
+  <div layout="rows center-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows center-center default (direction vr-hr)</h3>
+  <div layout="rows center-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows center-right default (direction vr-hr)</h3>
+  <div layout="rows center-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows center-spread default (direction vr-hr)</h3>
+  <div layout="rows center-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows center-justify default (direction vr-hr)</h3>
+  <div layout="rows center-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows center-stretch default (direction vr-hr)</h3>
+  <div layout="rows center-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>rows bottom-left default (direction vr-hr)</h3>
+  <div layout="rows bottom-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows bottom-center default (direction vr-hr)</h3>
+  <div layout="rows bottom-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows bottom-right default (direction vr-hr)</h3>
+  <div layout="rows bottom-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows bottom-spread default (direction vr-hr)</h3>
+  <div layout="rows bottom-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows bottom-justify default (direction vr-hr)</h3>
+  <div layout="rows bottom-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows bottom-stretch default (direction vr-hr)</h3>
+  <div layout="rows bottom-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>rows stretch-left default (direction vr-hr)</h3>
+  <div layout="rows stretch-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows stretch-center default (direction vr-hr)</h3>
+  <div layout="rows stretch-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows stretch-right default (direction vr-hr)</h3>
+  <div layout="rows stretch-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows stretch-spread default (direction vr-hr)</h3>
+  <div layout="rows stretch-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows stretch-justify default (direction vr-hr)</h3>
+  <div layout="rows stretch-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>rows stretch-stretch default (direction vr-hr)</h3>
+  <div layout="rows stretch-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>columns top-left default (direction vr-hr)</h3>
+  <div layout="columns top-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns top-center default (direction vr-hr)</h3>
+  <div layout="columns top-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns top-right default (direction vr-hr)</h3>
+  <div layout="columns top-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns top-spread default (direction vr-hr)</h3>
+  <div layout="columns top-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns top-justify default (direction vr-hr)</h3>
+  <div layout="columns top-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns top-stretch default (direction vr-hr)</h3>
+  <div layout="columns top-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>columns center-left default (direction vr-hr)</h3>
+  <div layout="columns center-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns center-center default (direction vr-hr)</h3>
+  <div layout="columns center-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns center-right default (direction vr-hr)</h3>
+  <div layout="columns center-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns center-spread default (direction vr-hr)</h3>
+  <div layout="columns center-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns center-justify default (direction vr-hr)</h3>
+  <div layout="columns center-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns center-stretch default (direction vr-hr)</h3>
+  <div layout="columns center-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>columns bottom-left default (direction vr-hr)</h3>
+  <div layout="columns bottom-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns bottom-center default (direction vr-hr)</h3>
+  <div layout="columns bottom-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns bottom-right default (direction vr-hr)</h3>
+  <div layout="columns bottom-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns bottom-spread default (direction vr-hr)</h3>
+  <div layout="columns bottom-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns bottom-justify default (direction vr-hr)</h3>
+  <div layout="columns bottom-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns bottom-stretch default (direction vr-hr)</h3>
+  <div layout="columns bottom-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h3>columns stretch-left default (direction vr-hr)</h3>
+  <div layout="columns stretch-left">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns stretch-center default (direction vr-hr)</h3>
+  <div layout="columns stretch-center">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns stretch-right default (direction vr-hr)</h3>
+  <div layout="columns stretch-right">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns stretch-spread default (direction vr-hr)</h3>
+  <div layout="columns stretch-spread">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns stretch-justify default (direction vr-hr)</h3>
+  <div layout="columns stretch-justify">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <h3>columns stretch-stretch default (direction vr-hr)</h3>
+  <div layout="columns stretch-stretch">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+
+  <hr />
+
+  <h4>Sample</h4>
+
+  <div layout="rows stretch-justify">
+    <div>1</div>
+    <div self="size-x1">2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div self="size-x1">7</div>
+    <div>8</div>
+  </div>
+</body>
+</html>
